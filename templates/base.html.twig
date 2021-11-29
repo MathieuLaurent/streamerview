@@ -3,16 +3,54 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Streamer View{% endblock %}</title>
-        {% block stylesheets %}
-        {% endblock %}
+        <link rel="stylesheet" href="{{ asset('css/styles.css')}}">
     </head>
     <header>
-        
+        <h1>Bienvenue sur Streamer View </h1>
     </header>
     <body>
-        {% block body %}{% endblock %}
+        <div class="toggle">
+            <span>DarkMode</span>
+            <input type="checkbox" id="toggle" />
+            <label for="toggle"></label>
+        </div>
+        {% block javascripts %}
         
-        {% block javascripts %}{% endblock %}
+        <script>
+            var checkbox = document.getElementById("toggle"); //on récupère la checkbox
+
+            //vérification de l'état actuel de la page
+            if (sessionStorage.getItem("mode") == "dark") {
+            darkmode();
+            } else {
+            whitemode(); 
+            }
+
+            //évènement au changement du bouton
+            checkbox.addEventListener("change", function() {
+            if (checkbox.checked) {
+                darkmode(); 
+            } else {
+                whitemode(); 
+            }
+            });
+
+            //fonction pour le dark mode
+            function darkmode() {
+            document.body.classList.add("dark-mode");
+            checkbox.checked = true;
+            sessionStorage.setItem("mode", "dark");
+            }
+
+            //fonction pour le white mode
+            function whitemode() {
+            document.body.classList.remove("dark-mode");
+            checkbox.checked = false;
+            sessionStorage.setItem("mode", "light");
+            }
+        </script>
+
+        {% endblock %}
     </body>
     <footer>
     </footer>

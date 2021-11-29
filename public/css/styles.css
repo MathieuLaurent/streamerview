@@ -1,7 +1,81 @@
+@font-face {
+    font-family: typewcond;
+    src: url(typewcond_regular.otf);
+}
+
 header{
     float:left;
-    
+    height: 100px;
+    box-shadow: rgb(197, 196, 196) 1px 1px 1px 1px;
+    width: 100%;
+    margin-top: 0;
+    margin-left: 0;
+    text-align: center;
 }
-h1{
-    color:black;
+header h1{
+    line-height: 50px;
+    font-family: typewcond;
+    font-size: 38px;
+}
+
+.toggle input[type='checkbox'] {
+    display: none;
+}
+
+.toggle label {
+    background-color: rgb(238, 235, 235);
+    border: 2px solid rgb(34, 34, 34);
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    transition: all ease-in-out 0.3s;
+    width: 40px;
+    height: 17px;
+    float: right;
+    margin-top: 5px;
+}
+.toggle span{
+    margin-left: 96%;
+    font-family: typewcond;
+}
+.toggle label::after {
+    background-color: rgb(34, 34, 34);
+    border-radius: 50%;
+    content: ' ';
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    transition: all ease-in-out 0.3s;
+    width: 15px;
+    height: 15px;
+    left: 1px;
+    top: 1px;
+}
+.toggle input[type='checkbox']:checked ~ label {
+    background-color: rgb(238, 235, 235);
+    border-color: rgb(34, 34, 34);
+    transition: 1s;
+}
+
+.toggle input[type='checkbox']:checked ~ label::after {
+    background-color: rgb(34, 34, 34);
+    width: 15px;
+    height: 15px;
+    transform: translateX(23px);
+    transition: 1s;
+}
+
+body.dark-mode{
+    background-color: rgb(34, 34, 34);
+    transition: 1s;
+    color:rgb(238, 235, 235);
+}
+
+body.dark-mode header{
+    box-shadow: rgb(19,19,19) 1px 1px 1px 1px;
+    transition: 1s;
+}
+body{
+    background-color: rgb(238, 235, 235);
+    transition: 1s;
 }
