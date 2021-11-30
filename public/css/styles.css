@@ -93,14 +93,14 @@ body{
 }
 
 /* Menu */
-ul,li{
+nav ul,li{
     list-style-type: none;
     display: inline;
 }
-ul{
+nav ul{
     line-height: 100px;
 }
-li{
+nav li{
     font-family: typewcond;
     font-size: 30px;
     margin-left: 10%;
@@ -120,4 +120,22 @@ li{
 nav ul li:hover{
     background-size: 100% 100%;
     cursor: pointer;
+}
+
+/* Barre de recherche */
+
+.barreRecherche{
+    text-align: center;
+}
+.barreRecherche input{
+    width: 30%;
+    height: 30px;
+    font-family: typewcond;
+    font-size: 24px;
+}
+.barreRecherche button{
+    border-radius: 10px;
+    font-family: typewcond;
+    font-size: 24px;
+    width: auto;
 }

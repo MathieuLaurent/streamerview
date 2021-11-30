@@ -18,15 +18,25 @@
         </nav>
     </header>
     <body>
+
+        {# Div dark Mode #}
         <div class="toggle">
             <span>DarkMode</span>
             <input type="checkbox" id="toggle" />
             <label for="toggle"></label>
         </div>
+    
+    {% block body %}
+
+        {# On initialise le body pour les autres pages !!!laisser vide!!! #}
+
+    {% endblock %}
+
+        
         {% block javascripts %}
         
         <script>
-            var checkbox = document.getElementById("toggle"); //on récupère la checkbox
+            var checkbox = document.getElementById("toggle"); //on récupère la valeur de la checkbox
 
             //vérification de l'état actuel de la page
             if (sessionStorage.getItem("mode") == "dark") {
