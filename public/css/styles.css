@@ -138,4 +138,5 @@ nav ul li:hover{
     font-family: typewcond;
     font-size: 24px;
     width: auto;
+    cursor: pointer;
 }
