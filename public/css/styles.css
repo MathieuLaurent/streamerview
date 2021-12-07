@@ -1,8 +1,30 @@
+/* Charte Graphique
+white mode : texte => black
+            background=> rgb(238, 235, 235) (blanc)
+            border et boxshadow =>rgb(197, 196, 196) (gris)
+
+dark mode : texte => rgb(238, 235, 235) (blanc)
+            background=> rgb(34, 34, 34) (noir)
+            border et boxshadow =>rgb(19,19,19) (noir foncé)
+
+couleur principale du site:
+rgb(101, 134, 233)   (bleu)
+survol: rgb(44, 86, 212)  (bleu foncé)
+
+
+font-family => typewcond, Arial, sans-serif
+
+animation survol =>
+    background:linear-gradient(to top, rgba(255, 255, 255, 0.5)0%, rgba(255, 255, 255, 0.5) 2px, transparent 2px) no-repeat;
+    background-size:0 100%;
+    transition: background-size .3s;
+
+*/
+
 @font-face {
     font-family: typewcond;
     src: url(typewcond_regular.otf);
 }
-
 header{
     float:left;
     height: 100px;
@@ -14,8 +36,13 @@ header{
 }
 header h1{
     line-height: 50px;
-    font-family: typewcond;
+    font-family: typewcond, Arial, sans-serif;
     font-size: 38px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
 }
 
 
@@ -38,7 +65,7 @@ header h1{
 }
 .toggle span{
     margin-left: 96%;
-    font-family: typewcond;
+    font-family: typewcond, Arial, sans-serif;
 }
 .toggle label::after {
     background-color: rgb(34, 34, 34);
@@ -80,17 +107,25 @@ body.dark-mode header{
     box-shadow: rgb(19,19,19) 1px 1px 1px 1px;
     transition: 1s;
 }
-body.dark-mode li{
-    background:linear-gradient(to top, rgba(255, 255, 255, 0.5)0%, rgba(255, 255, 255, 0.5) 2px, transparent 2px) no-repeat;
-    background-size:0 100%;
-    transition: background-size .3s;
+
+body.dark-mode footer{
+    border: 1px solid rgb(19, 19, 19);
 }
 
+body.dark-mode .footer a{
+    color:rgb(238, 235, 235);
+}
 
+body.dark-mode a{
+    color:rgb(238, 235, 235);
+}
 body{
     background-color: rgb(238, 235, 235);
     transition: 1s;
 }
+
+
+/* Fin du darkMode */
 
 /* Menu */
 nav ul,li{
@@ -101,10 +136,10 @@ nav ul{
     line-height: 100px;
 }
 nav li{
-    font-family: typewcond;
+    font-family: typewcond, Arial, sans-serif;
     font-size: 30px;
     margin-left: 10%;
-    background:linear-gradient(to top, rgba(0, 0, 0, 0.5)0%, rgba(0, 0, 0, 0.5) 2px, transparent 2px) no-repeat;
+    background:linear-gradient(to top, rgba(101, 134, 233, 0.5)0%, rgba(101, 134, 233, 0.5) 2px, transparent 2px) no-repeat;
     background-size:0 100%;
     transition: background-size .3s;
 }
@@ -114,8 +149,16 @@ nav li{
     margin-top: 10px;
     margin-right: 10px;
     border-radius: 10px;
-    font-family: typewcond;
+    font-family: typewcond, Arial, sans-serif;
     font-size: 18px;
+}
+.btn-blue{
+    background-color: rgb(101, 134, 233);
+    border: 1px solid rgb(101, 134, 233);
+    box-shadow: black 1px 1px 1px;
+}
+.btn-blue:hover{
+    background-color: rgb(44, 86, 212);
 }
 nav ul li:hover{
     background-size: 100% 100%;
@@ -130,13 +173,50 @@ nav ul li:hover{
 .barreRecherche input{
     width: 30%;
     height: 30px;
-    font-family: typewcond;
+    font-family: typewcond, Arial, sans-serif;
     font-size: 24px;
 }
 .barreRecherche button{
     border-radius: 10px;
-    font-family: typewcond;
+    font-family: typewcond, Arial, sans-serif;
     font-size: 24px;
     width: auto;
+    cursor: pointer;
+}
+
+
+/* Footer */
+
+footer{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border: 1px solid rgb(172, 172, 172);
+    font-family: typewcond, Arial, sans-serif;
+}
+.footer div{
+    margin-left:25%;
+    display: inline-block;
+    vertical-align: text-top;
+}
+.footer div ul li{
+    display: list-item;
+}
+
+.footer ul a{
+    list-style-type: none;
+    display: inline;
+    color:black;
+    text-decoration: none;
+}
+.footer a{
+    font-family: typewcond, Arial, sans-serif;
+    background:linear-gradient(to top, rgba(101, 134, 233, 0.5)0%, rgba(101, 134, 233, 0.5) 2px, transparent 2px) no-repeat;
+    background-size:0 100%;
+    transition: background-size .3s;
+}
+.footer ul a:hover{
+    background-size: 100% 100%;
     cursor: pointer;
 }

@@ -9,10 +9,10 @@
         <nav class="navbar">
             <div class="container">
                 <ul>
-                    <li>Accueil</li>
-                    <li>Streamer View</li>
-                    <li>Profil</li>
-                    <li><button id="buttonConnexion">Connexion/Inscription</button></li>
+                    <li><a href="{{path('home')}}">Accueil</a></li>
+                    <li><a href="{{path('streamerview')}}">Streamer View</a></li>
+                    <li><a href="{{path('profil')}}">Profil</a></li>
+                    <li><button id="buttonConnexion" class="btn-blue">Connexion/Inscription</button></li>
                 </ul>
             </div>
         </nav>
@@ -33,7 +33,29 @@
     {% endblock %}
 
         
-        {% block javascripts %}
+        
+    </body>
+    <footer>
+        <div class="footer">
+            <div>
+                <ul>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Nous contacter</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="{{path('home')}}">Accueil</a></li>
+                    <li><a href="{{path('streamerview')}}">StreamerView</a></li>
+                    <li><a href="{{path('profil')}}">Profil</a></li>
+                    <li><a href="#">Connexion/Inscription</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+    </footer>
+    {% block javascripts %}
         
         <script>
             var checkbox = document.getElementById("toggle"); //on récupère la valeur de la checkbox
@@ -70,7 +92,4 @@
         </script>
 
         {% endblock %}
-    </body>
-    <footer>
-    </footer>
 </html>
