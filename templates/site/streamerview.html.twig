@@ -1,9 +1,52 @@
-{# Page de cécile #}
-
+{# Page de Cécile #}
+{#class="visuelDuStreamEnCours"#}
+{#class="InfosDuStreamEnCours"#}
 
 {% extends 'base.html.twig' %}
 
 {% block body %}
+
+<div class="barreRecherche">
+    <input type="text" placeholder="Entrez le nom d'un stream...">
+    <button class="btn-blue">Rechercher</button>
+</div>
+
+ <!-- Twitch : video + chat + Infos streamer du stream en cours -->
+<div class="TwitchTout" style="margin: 30px 0 0 0">
+ <!-- Penser mettre le style="margin: 30px 0 0 0" dans le CSS et l'enlever de la div -->
+
+    <div class="TwitchIntegration">
+    <!-- Twitch : video -->
+        <div class="TwitchVideo">
+            <script src= "https://player.twitch.tv/js/embed/v1.js"></script>
+            <div id="SamplePlayerDivID"></div>
+            <script type="text/javascript">
+                var options = {
+                    width: "80%",
+                    height: "600px",
+                    channel: "Bulledop",
+                    };
+                var player = new Twitch.Player("SamplePlayerDivID", options);
+                player.setVolume(0.5);
+            </script>
+        </div>
+
+         <!-- Twitch : Infos streamer du stream en cours -->
+        <div class="TwitchInfosStreamerEnCours">
+            <!-- Penser à faire en sorte que cette div soit sur les 20% restants à droite de la vidéo -->
+        </div>
+    </div>
+
+    <!-- Twitch : chat -->
+    <div class="TwitchChat">
+        <iframe id="twitch-chat-embed"
+            src="https://www.twitch.tv/embed/Bulledop/chat?parent=streamerview.html.twig"
+            height="350"
+            width="100%">
+        </iframe>
+    </div>
+</div>
+
 
 
 {% endblock %}
