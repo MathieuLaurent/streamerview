@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "tmi.js": "^1.8.5",
+    "twitch-cli": "^0.0.2"
+  }
+}

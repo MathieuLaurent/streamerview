@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <title>{% block title %}Streamer View{% endblock %}</title>
         <link rel="stylesheet" href="{{ asset('css/styles.css')}}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css">
+        <script src="{{asset('js/script.js')}}"></script>
     </head>
     <header>
         <nav class="navbar">
@@ -71,13 +73,13 @@
             if (sessionStorage.getItem("mode") == "dark") {
             darkmode();
             } else {
-            whitemode(); 
+            whitemode();
             }
 
             //évènement au changement du bouton
             checkbox.addEventListener("change", function() {
             if (checkbox.checked) {
-                darkmode(); 
+                darkmode();
             } else {
                 whitemode(); 
             }
@@ -85,9 +87,9 @@
 
             //fonction pour le dark mode
             function darkmode() {
-            document.body.classList.add("dark-mode");
-            checkbox.checked = true;
-            sessionStorage.setItem("mode", "dark");
+                document.body.classList.add("dark-mode");
+                checkbox.checked = true;
+                sessionStorage.setItem("mode", "dark");
             }
 
             //fonction pour le white mode

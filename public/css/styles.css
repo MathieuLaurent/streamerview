@@ -25,6 +25,8 @@ animation survol =>
 
 */
 
+
+
 @font-face {
     font-family: typewcond;
     src: url(typewcond_regular.otf);
@@ -62,8 +64,8 @@ a{
     cursor: pointer;
     position: relative;
     transition: all ease-in-out 0.3s;
-    width: 40px;
-    height: 17px;
+    width: 44px;
+    height: 21px;
     float: right;
     margin-top: 5px;
 }
@@ -132,7 +134,7 @@ body{
 /* Fin du darkMode */
 
 /* Menu */
-nav ul,li{
+nav ul, nav li, footer li{
     list-style-type: none;
     display: inline;
 }
@@ -226,3 +228,17 @@ footer{
     background-size: 100% 100%;
     cursor: pointer;
 }
+
+/***** Page Accueil ******/
+
+/*.containerHome div{
+    border: 1px solid black;
+}
+
+.containerHome{
+    display: grid;
+    grid-template-columns: repeat(30% 49%);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    border: 1px solid red;
+}*/
