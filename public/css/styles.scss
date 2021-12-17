@@ -15,15 +15,14 @@ survol: rgb(44, 86, 212)  (bleu foncé)
 font-family => typewcond, Arial, sans-serif
 
 animation survol =>
-    a mettre sur l'element sans survol:
-    background:linear-gradient(to top, rgba(101, 134, 233, 0.5)0%, rgba(101, 134, 233, 0.5) 2px, transparent 2px) no-repeat;
+    background:linear-gradient(to top, rgba(255, 255, 255, 0.5)0%, rgba(255, 255, 255, 0.5) 2px, transparent 2px) no-repeat;
     background-size:0 100%;
     transition: background-size .3s;
 
-    a ajouter au survol de l'element:
-    background-size:100% 100%;
-
 */
+
+$fondBlanc: rgb(238, 235, 235);
+$boxShadowGris: rgb(197, 196, 196);
 
 @font-face {
     font-family: typewcond;
@@ -173,7 +172,6 @@ nav ul li:hover{
 
 .barreRecherche{
     text-align: center;
-    padding-top:8%;
 }
 .barreRecherche input{
     width: 30%;
@@ -193,7 +191,6 @@ nav ul li:hover{
 /* Footer */
 
 footer{
-    margin-top: 2%;
     position: relative;
     left: 0;
     bottom: 0;
